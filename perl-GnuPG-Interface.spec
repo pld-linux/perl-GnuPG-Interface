@@ -10,7 +10,8 @@ Summary(pl):	GnuPG::Interface - interfejs perlowy do GnuPG
 Name:		perl-GnuPG-Interface
 Version:	0.33
 Release:	5
-License:	GPL/Artistic
+# same as perl
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	7349795ec874c2af78eec7f274d96bc8
