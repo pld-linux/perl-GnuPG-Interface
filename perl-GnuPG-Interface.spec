@@ -3,8 +3,8 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	GnuPG
-%define	pnam	Interface
+%define		pdir	GnuPG
+%define		pnam	Interface
 Summary:	GnuPG::Interface - Perl interface to GnuPG
 Summary(pl):	GnuPG::Interface - interfejs perlowy do GnuPG
 Name:		perl-GnuPG-Interface
