@@ -5,30 +5,33 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	GnuPG
 %define	pnam	Interface
-Summary:	GnuPG::Interface - Perl module to use GnuPG
-Summary(pl):	GnuPG::Interface - Obs³uga GnuPG
+Summary:	GnuPG::Interface - Perl interface to GnuPG
+Summary(pl):	GnuPG::Interface - perlowy interfejs do GnuPG
 Name:		perl-GnuPG-Interface
 Version:	0.33
-Release:	3
+Release:	4
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-URL:		http://www.gnu.org/
 BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRequires:	perl >= 5.6.1
 %if %{?_without_tests:0}%{!?_without_tests:1}
 BuildRequires:	perl-Class-MethodMaker
 %endif
-# why is it marked as necessary ?
-#Requires:	perl-GnuPG
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-This module attempts make using GnuPG simple and natural.
+GnuPG::Interface and its associated modules are designed to provide an
+object-oriented method for interacting with GnuPG, being able to
+perform functions such as but not limited to encrypting, signing,
+decryption, verification, and key-listing parsing.
 
 %description -l pl
-Niniejszy modu³ jest prób± ³atwej i naturalnej obs³ugi GnuPG.
+GnuPG::Interface i powi±zane modu³y s³u¿± powsta³y, by udostêpniæ
+obiektowo zorientowany sposób na interakcjê z GnuPG. Modu³y mog±
+wykonywaæ funkcje takie jak szyfrowanie, podpisywanie,
+odszyfrowywanie, weryfikacjê, analizê list kluczy i inne.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
