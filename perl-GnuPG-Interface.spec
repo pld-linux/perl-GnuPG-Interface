@@ -9,11 +9,11 @@ Summary:	GnuPG::Interface - Perl interface to GnuPG
 Summary(pl):	GnuPG::Interface - perlowy interfejs do GnuPG
 Name:		perl-GnuPG-Interface
 Version:	0.33
-Release:	4
+Release:	5
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	perl >= 5.6.1
 %if %{?_without_tests:0}%{!?_without_tests:1}
 BuildRequires:	perl-Class-MethodMaker
@@ -37,7 +37,8 @@ odszyfrowywanie, weryfikacjê, analizê list kluczy i inne.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-%{__perl} Makefile.PL
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor 
 %{__make}
 
 %{!?_without_tests:TEST_SHARED_MEMORY=1 TEST_FILE_CACHE=1 %{__make} test}
@@ -47,7 +48,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-install -d $RPM_BUILD_ROOT%{perl_sitelib}/%{pdir}/%{pnam}
+install -d $RPM_BUILD_ROOT%{perl_vendorlib}/%{pdir}/%{pnam}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -55,6 +56,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README THANKS MANIFEST
-%{perl_sitelib}/%{pdir}/*.pm
-%dir %{perl_sitelib}/auto/%{pdir}/%{pnam}/*
+%{perl_vendorlib}/%{pdir}/*.pm
+%dir %{perl_vendorlib}/auto/%{pdir}/%{pnam}/*
 %{_mandir}/man3/*
