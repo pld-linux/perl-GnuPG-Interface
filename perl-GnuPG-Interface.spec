@@ -8,7 +8,7 @@ Summary:	GnuPG::Interface - Perl module to use GnuPG
 Summary(pl):	GnuPG::Interface - Obs³uga GnuPG
 Name:		perl-GnuPG-Interface
 Version:	0.33
-Release:	2
+Release:	3
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -24,7 +24,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 This module attempts make using GnuPG simple and natural.
 
 %description -l pl
-Nieniejszy modu³ jest prób± ³atwej i naturalnej obs³ugi GnuPG.
+Niniejszy modu³ jest prób± ³atwej i naturalnej obs³ugi GnuPG.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
