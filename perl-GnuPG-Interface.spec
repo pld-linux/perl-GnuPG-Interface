@@ -1,6 +1,7 @@
 #
 # Conditional build:
 # _without_tests - do not perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	GnuPG
 %define	pnam	Interface
@@ -15,8 +16,11 @@ Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%
 URL:		http://www.gnu.org/
 BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRequires:	perl >= 5.6.1
-BuildRequires:	perl-GnuPG
-Requires:	perl-GnuPG
+%if %{?_without_tests:0}%{!?_without_tests:1}
+BuildRequires:	perl-Class-MethodMaker
+%endif
+# why is it marked as necessary ?
+#Requires:	perl-GnuPG
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
