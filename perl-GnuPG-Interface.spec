@@ -6,7 +6,7 @@
 %define		pdir	GnuPG
 %define		pnam	Interface
 Summary:	GnuPG::Interface - Perl interface to GnuPG
-Summary(pl):	GnuPG::Interface - interfejs perlowy do GnuPG
+Summary(pl.UTF-8):   GnuPG::Interface - interfejs perlowy do GnuPG
 Name:		perl-GnuPG-Interface
 Version:	0.33
 Release:	8
@@ -31,11 +31,11 @@ object-oriented method for interacting with GnuPG, being able to
 perform functions such as but not limited to encrypting, signing,
 decryption, verification, and key-listing parsing.
 
-%description -l pl
-GnuPG::Interface i powi±zane modu³y s³u¿± powsta³y, by udostêpniæ
-obiektowo zorientowany sposób na interakcjê z GnuPG. Modu³y mog±
-wykonywaæ funkcje takie jak szyfrowanie, podpisywanie,
-odszyfrowywanie, weryfikacjê, analizê list kluczy i inne.
+%description -l pl.UTF-8
+GnuPG::Interface i powiÄ…zane moduÅ‚y sÅ‚uÅ¼Ä… powstaÅ‚y, by udostÄ™pniÄ‡
+obiektowo zorientowany sposÃ³b na interakcjÄ™ z GnuPG. ModuÅ‚y mogÄ…
+wykonywaÄ‡ funkcje takie jak szyfrowanie, podpisywanie,
+odszyfrowywanie, weryfikacjÄ™, analizÄ™ list kluczy i inne.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
