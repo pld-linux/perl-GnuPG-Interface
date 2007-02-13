@@ -6,7 +6,7 @@
 %define		pdir	GnuPG
 %define		pnam	Interface
 Summary:	GnuPG::Interface - Perl interface to GnuPG
-Summary(pl.UTF-8):   GnuPG::Interface - interfejs perlowy do GnuPG
+Summary(pl.UTF-8):	GnuPG::Interface - interfejs perlowy do GnuPG
 Name:		perl-GnuPG-Interface
 Version:	0.33
 Release:	8
