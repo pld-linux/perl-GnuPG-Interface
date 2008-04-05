@@ -6,18 +6,19 @@
 %define		pdir	GnuPG
 %define		pnam	Interface
 Summary:	GnuPG::Interface - Perl interface to GnuPG
-Summary(pl.UTF-8):	GnuPG::Interface - interfejs perlowy do GnuPG
+Summary(pl.UTF-8):	GnuPG::Interface - perlowy interfejs do GnuPG
 Name:		perl-GnuPG-Interface
 Version:	0.36
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/GnuPG/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	6f097d3076b3311e8ef20ce3c2865c66
+URL:		http://search.cpan.org/dist/GnuPG-Interface/
 BuildRequires:	gnupg
-BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	perl-devel >= 1:5.8.0
+BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
 BuildRequires:	perl-Class-MethodMaker
 %endif
@@ -33,10 +34,10 @@ perform functions such as but not limited to encrypting, signing,
 decryption, verification, and key-listing parsing.
 
 %description -l pl.UTF-8
-GnuPG::Interface i powiązane moduły służą powstały, by udostępnić
-obiektowo zorientowany sposób na interakcję z GnuPG. Moduły mogą
-wykonywać funkcje takie jak szyfrowanie, podpisywanie,
-odszyfrowywanie, weryfikację, analizę list kluczy i inne.
+GnuPG::Interface i powiązane moduły powstały, by udostępnić obiektowo
+zorientowany sposób na interakcję z GnuPG. Moduły mogą wykonywać
+funkcje takie jak szyfrowanie, podpisywanie, odszyfrowywanie,
+weryfikację, analizę list kluczy i inne.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
