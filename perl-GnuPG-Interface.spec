@@ -9,7 +9,7 @@ Summary:	GnuPG::Interface - Perl interface to GnuPG
 Summary(pl.UTF-8):	GnuPG::Interface - perlowy interfejs do GnuPG
 Name:		perl-GnuPG-Interface
 Version:	0.42
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
@@ -24,6 +24,7 @@ BuildRequires:	perl-Class-MethodMaker
 %endif
 # not recognized by perl.req
 Requires:	perl-Class-MethodMaker
+Requires:	perl-Mouse
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
