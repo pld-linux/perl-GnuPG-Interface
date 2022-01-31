@@ -7,13 +7,13 @@
 Summary:	GnuPG::Interface - Perl interface to GnuPG
 Summary(pl.UTF-8):	GnuPG::Interface - perlowy interfejs do GnuPG
 Name:		perl-GnuPG-Interface
-Version:	1.00
+Version:	1.02
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/GnuPG/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	e790d9636d57d7d40830ab95bf6931f2
+# Source0-md5:	3589cd8cc4b68c00e6cfd0b12daf52fc
 URL:		http://search.cpan.org/dist/GnuPG-Interface/
 BuildRequires:	gnupg
 BuildRequires:	perl-devel >= 1:5.8.0
