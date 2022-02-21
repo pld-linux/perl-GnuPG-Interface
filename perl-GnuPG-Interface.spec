@@ -24,6 +24,7 @@ BuildRequires:	perl-Moo
 BuildRequires:	perl-MooX-late
 BuildRequires:	perl-MooX-HandlesVia
 BuildRequires:	perl-Moose
+BuildRequires:	perl-Type-Tiny
 %endif
 # not recognized by perl.req
 Requires:	perl-Class-MethodMaker
