@@ -20,6 +20,7 @@ BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
 BuildRequires:	perl-Class-MethodMaker
+BuildRequires:	perl-Data-Perl
 BuildRequires:	perl-Moo
 BuildRequires:	perl-MooX-late
 BuildRequires:	perl-MooX-HandlesVia
